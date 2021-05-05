@@ -14,7 +14,7 @@ var parser = (function () {
    * @param  {Boolean} ms   Optional: use milliseconds for startTime and endTime
    * @return {Array}
    */
-  pItems.fromSrt = function (data, timeFormat, isYoutubeAutoTranscript) {
+  pItems.fromVtt = function (data, timeFormat, isYoutubeAutoTranscript) {
     var useYoutubeAutoTranscript = isYoutubeAutoTranscript ? true : false;
     data = data.replace(/\r/g, "");
     var regex = /(\d+)?\n?(\d{2}:\d{2}:\d{2}[,.]\d{3}) --> (\d{2}:\d{2}:\d{2}[,.]\d{3}).*\n/g;
@@ -44,7 +44,7 @@ var parser = (function () {
    * @param  {Array}  data
    * @return {String}      SubRip subtitles string
    */
-  pItems.toSrt = function (data) {
+  pItems.toVtt = function (data) {
     if (!data instanceof Array) return "";
     var res = "";
 

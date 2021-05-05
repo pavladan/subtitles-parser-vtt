@@ -5,10 +5,10 @@ interface Subtitle {
   text: string;
 }
 
-export function fromSrt(
+export function fromVtt(
   data: string,
   timeFormat?: "ms" | "s",
   isYoutubeAutoTranscript?: boolean
 ): Subtitle[];
 
-export function toSrt(data: Subtitle[]): string;
+export function toVtt(data: Subtitle[]): string;

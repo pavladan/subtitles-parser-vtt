@@ -1,7 +1,7 @@
 {
     "name": "subtitles-parser-vtt",
     "description": "NodeJS Parser for SubRip subtitles",
-    "version": "0.0.9",
+    "version": "0.1.0",
     "author": "bazh <interesno@gmail.com>",
     "license": "MIT",
     "keywords": [
@@ -12,11 +12,11 @@
         "subtitles parser",
         "subtitle parser"
     ],
-    "homepage": "https://github.com/pavladan/subtitles-parser",
-    "bugs": "https://github.com/bazh/pavladan/issues",
+    "homepage": "https://github.com/pavladan/subtitles-parser-vtt",
+    "bugs": "https://github.com/pavladan/subtitles-parser-vtt/issues",
     "repository": {
         "type": "git",
-        "url": "https://github.com/pavladan/subtitles-parser"
+        "url": "https://github.com/pavladan/subtitles-parser-vtt"
     },
     "main": "index.js",
     "devDependencies": {
@@ -30,7 +30,6 @@
         "test": "test"
     },
     "scripts": {
-        "test": "mocha",
-        "make": "uglifyjs -cmo subtitles.parser.min.js index.js"
+        "test": "mocha"
     }
 }

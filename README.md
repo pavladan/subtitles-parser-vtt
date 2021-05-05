@@ -9,9 +9,6 @@ NodeJS:
 
     npm install subtitles-parser-vtt
 
-or [download](https://raw.github.com/pavladan/subtitles-parser/master/subtitles.parser.min.js) minified version of subtitle-parser to use module in a browser
-
-
 ### Example
 
 Let's say we have my.srt SubRip subtitles file:
@@ -35,7 +32,7 @@ var parser = require('subtitles-parser-vtt');
 
 var srt = fs.readFileSync('my.srt','utf8');
 
-var data = parser.fromSrt(srt);
+var data = parser.fromVtt(srt);
 ```
 
 data object will look like:
@@ -53,10 +50,10 @@ data object will look like:
         text: 'Subtitle 2.1\nSubtitle 2.2'
     }]
 
-if you will pass `true` flag to `fromSrt` function:
+if you will pass `true` flag to `fromVtt` function:
 
 ```js
-var dataMs = parser.fromSrt(srt, true);
+var dataMs = parser.fromVtt(srt, true);
 ```
 
 then it will convert startTime and endTime properties into millisecods:
@@ -75,4 +72,4 @@ then it will convert startTime and endTime properties into millisecods:
     }]
 
 
-`parser.toSrt()` will convert object back to SubRip subtitles format.
+`parser.toVtt()` will convert object back to SubRip subtitles format.
