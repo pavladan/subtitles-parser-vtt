@@ -32,7 +32,7 @@ var parser = require('subtitles-parser-vtt');
 
 var srt = fs.readFileSync('my.srt','utf8');
 
-var data = parser.fromVtt(srt);
+var data = parser.fromVtt(srt, 's');
 ```
 
 data object will look like:
@@ -50,10 +50,10 @@ data object will look like:
         text: 'Subtitle 2.1\nSubtitle 2.2'
     }]
 
-if you will pass `true` flag to `fromVtt` function:
+if you will pass `ms` parameter to `fromVtt` function:
 
 ```js
-var dataMs = parser.fromVtt(srt, true);
+var dataMs = parser.fromVtt(srt, 'ms');
 ```
 
 then it will convert startTime and endTime properties into millisecods:
